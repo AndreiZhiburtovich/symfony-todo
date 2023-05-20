@@ -17,7 +17,7 @@ class Task
     private ?string $content = null;
 
     #[ORM\Column]
-    private ?bool $isFinished = null;
+    private bool $isFinished = false;
 
     public function getId(): ?int
     {
@@ -36,7 +36,7 @@ class Task
         return $this;
     }
 
-    public function isIsFinished(): ?bool
+    public function isIsFinished(): bool
     {
         return $this->isFinished;
     }
